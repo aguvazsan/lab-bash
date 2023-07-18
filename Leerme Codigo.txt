@@ -1,0 +1,112 @@
+Microsoft Windows [Versión 10.0.22621.1555]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\aguva> cd /
+
+C:\>cd /
+
+C:\>G:
+
+
+G:\> cd Mi Unidad
+
+G:\Mi unidad>cd Ironhack
+
+G:\Mi unidad\IRONHACK>cd week_1
+
+G:\Mi unidad\IRONHACK\Week_1>cd lab-bash
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash>mkdir new_dir
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash>del new_dir
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\new_dir\*, ¿Está seguro (S/N)? s
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>copy "G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem\sed.txt" "G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy"
+        1 archivo(s) copiado(s).
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>"G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem\lorem.txt" "G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy"
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>copy "G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem\lorem.txt" "G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy"
+        1 archivo(s) copiado(s).
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>copy "G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem\at.txt" "G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy"
+        1 archivo(s) copiado(s).
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>"G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem\sed.txt"
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>"G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem\at.txt"
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem>"G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem\lorem.txt"
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy>findstr /n . sed.txt  | findstr "^[0-3]:"
+1:Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+2:totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+3:Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy>findstr /n . sed.txt  | findstr "^[7-9]:"
+7:Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+8:nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+9:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy>echo Homo homini lupus. >>sed.txt
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy>type sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus.
+
+G:\Mi unidad\IRONHACK\Week_1\lab-bash\lorem-copy>findstr /n . sed.txt  | findstr "^[7-9]:"
+7:Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+8:nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+9:vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ sed -i 's/et/ET/g' lorem/at.txt
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ whoami
+aguva
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ pwd
+/g/mi unidad/ironhack/week_1/lab-bash
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ ls -i lorem/*.txt
+12410556575882158933 lorem/at.txt   9819947149712035865 lorem/lorem.txt   1292205308630381908 lorem/sed.txt
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ cat lorem/sed.txt | wc -l
+9
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ find / -type f -name "lorem*" 2>/dev/null | grep -c lorem
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ # Prompt the user to enter their name
+read -p "Enter your name: " name
+
+# Display a message with the user's name
+
+echo "Hello, $name!"
+Enter your name: Agustin
+
+Hello, Agustin!
+
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ mkdir "$name"
+
+
+aguva@LAPTOP-H490NOAO MINGW64 /g/mi unidad/ironhack/week_1/lab-bash (master)
+$ rmdir "$name"
+
